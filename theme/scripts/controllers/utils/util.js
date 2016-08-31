@@ -31,7 +31,7 @@ angular.module( 'marketplace' )
     return {
         
         // Create interceptor request
-        callRequest: function ( api, method, data ) {
+        callRequest: function ( api, method, data, abstractUrl ) {
             
             var apiName = api, m = method, d = data;
             
@@ -43,7 +43,7 @@ angular.module( 'marketplace' )
                 d = method;
             }
             
-            var URL = server.URL + '/' + apiName;
+            var URL = abstractUrl ? apiName : server.URL + '/' + apiName;
             
             var dfd = $q.defer();
             

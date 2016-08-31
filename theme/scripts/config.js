@@ -11,7 +11,7 @@ angular.module( 'marketplace' )
 .constant( 'server',  {
 
     // Local
-    URL: 'http://localhost:8383/jVoidTheme/'
+    URL: 'http://localhost:9080/jVoidTheme/'
     // Server
     //URL: 'http://52.196.33.166/marketplace-rest-api'
 })
