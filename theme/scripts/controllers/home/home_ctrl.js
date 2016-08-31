@@ -6,20 +6,20 @@ angular.module('marketplace.home', [])
         
     // Data model biding
     $scope.loadData = function () {
-        util.callRequest('json/product_object.json', "GET").then(function (data) {
-            $scope.product_features = data.results.features;
+        util.callRequest('/jvoid-products', "GET").then(function (data) {
+            $scope.product_features = data.products;
  
-            $scope.product_recommand = data.results.recommends;
-  
-            $scope.tshirts = data.results.tshirts;
-      
-            $scope.blazers = data.results.blazers;
-     
-            $scope.product_sunglass = data.results.sunglass;
-        
-            $scope.product_poloshirts = data.results.poloshirts;
-       
-            $scope.product_kids = data.results.kids;
+//            $scope.product_recommand = data.results.recommends;
+//  
+//            $scope.tshirts = data.results.tshirts;
+//      
+//            $scope.blazers = data.results.blazers;
+//     
+//            $scope.product_sunglass = data.results.sunglass;
+//        
+//            $scope.product_poloshirts = data.results.poloshirts;
+//       
+//            $scope.product_kids = data.results.kids;
         });
     };
 
