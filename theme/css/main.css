@@ -909,6 +909,17 @@ h2.title {
  position:relative;
 }
 
+.productinfo>img{
+    height: 249px;
+    object-fit: contain;
+}
+
+.productinfo>p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .product-overlay {
   background:#FE980F;
   top: 0;

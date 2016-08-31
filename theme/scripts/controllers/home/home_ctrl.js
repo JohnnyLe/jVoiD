@@ -6,7 +6,7 @@ angular.module('marketplace.home', [])
         
     // Data model biding
     $scope.loadData = function () {
-        util.callRequest('/jvoid-products', "GET").then(function (data) {
+        util.callRequest('jvoid-products', "GET").then(function (data) {
             $scope.product_features = data.products;
  
 //            $scope.product_recommand = data.results.recommends;
