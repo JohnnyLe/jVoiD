@@ -234,25 +234,25 @@ app.controller('navigationController', function($scope, $http, $sce, $location) 
 	});
 });
 
-function sortOutAllCategories(catArray, parentID){
-	var cats = [];
-	catArray.forEach(function(cat) 
+function sortOutAllCategories(catArray, parentID) {
+    var cats = [];
+    catArray.forEach(function (cat)
     {
-    	if(cat.parentId == parentID){
-			var out = sortOutAllCategories(catArray, cat.id);	
-    		var outJson = {};
-    		outJson.name = cat.categoryName;
-    		outJson.id = cat.id;
-    		outJson.values = out;    
-		    cats.push(outJson);
-		    if(cats.length>cat.position){
-		    	var temp = cats[cat.position-1];
-		    	cats[cat.position-1] = outJson;
-		    	cats[cats.length-1] = temp;
-		    }
-    	}
+        if (cat.parentId == parentID) {
+            var out = sortOutAllCategories(catArray, cat.id);
+            var outJson = {};
+            outJson.name = cat.categoryName;
+            outJson.id = cat.id;
+            outJson.values = out;
+            cats.push(outJson);
+            if (cats.length > cat.position) {
+                var temp = cats[cat.position - 1];
+                cats[cat.position - 1] = outJson;
+                cats[cats.length - 1] = temp;
+            }
+        }
     });
-    
+
     return cats;
 }
 

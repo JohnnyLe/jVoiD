@@ -381,9 +381,9 @@ angular.module('marketplace.directive', [ 'components' ])
             $scope.brands = [];
             
             $scope.loadData = function () {
-                // load categories
-                util.callRequest('http://localhost:8383/jVoidTheme/json/left-slidebar.json', "GET", null, true).then(function (data) {
-                    $scope.categories = data.results;
+                // load categories                
+                util.callRequest('jvoid-categories', 'GET').then( function( data ) {
+                    $scope.categories = sortOutAllCategories(data.categories, 0);
                 });
                 
                 // load brands
@@ -398,6 +398,28 @@ angular.module('marketplace.directive', [ 'components' ])
                 // init price range
                 $('#sl2').slider();
             });
+            
+            function sortOutAllCategories(catArray, parentID) {
+                var cats = [];
+                catArray.forEach(function (cat)
+                {
+                    if (cat.parentId === parentID) {
+                        var out = sortOutAllCategories(catArray, cat.id);
+                        var outJson = {};
+                        outJson.name = cat.categoryName;
+                        outJson.id = cat.id;
+                        outJson.child = out;
+                        cats.push(outJson);
+                        if (cats.length > cat.position) {
+                            var temp = cats[cat.position - 1];
+                            cats[cat.position - 1] = outJson;
+                            cats[cats.length - 1] = temp;
+                        }
+                    }
+                });
+
+                return cats;
+            }
         }]
     };        
 }]);
