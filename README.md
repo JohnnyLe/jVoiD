@@ -120,6 +120,6 @@ jVoiD is released under the terms of the Apache Software License 2 (see LICENSE.
 We also offer various levels of [enterprise support options](http://www.jvoid.com). Please [contact us](http://www.jvoid.com) for detailed information.
 
 ### New themes
-![screencapture-localhost-8383-jvoidtheme-1472700970537](https://cloud.githubusercontent.com/assets/1794584/18154626/808f5710-7030-11e6-9469-4f361a281f2e.png)
+![screencapture-localhost-8383-jvoidtheme-1472701866449](https://cloud.githubusercontent.com/assets/1794584/18154950/2c02b126-7033-11e6-9158-cd0daca7b0aa.png)
 
 
