@@ -1,5 +1,5 @@
-//linh
-//hung
+We're on maintain & add more features
+
 # jVoiD
 
 ## Introduction 
