@@ -1,6 +1,12 @@
-//linh
-//hung
+
 # jVoiD
+
+## Architect 
+<img width="663" alt="architect" src="https://cloud.githubusercontent.com/assets/1794584/18154279/853cfec8-702d-11e6-93b8-6d716cd52e3f.png">
+
+## Roadmap
+https://trello.com/b/GyKG8x8h/jvoid-maintain
+
 
 ## Introduction 
 
