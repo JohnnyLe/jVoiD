@@ -1,4 +1,8 @@
 
+NOTE:
+This repository will no longer maintain,
+We moved to new develop branch here https://github.com/JohnnyLe/Modern-Ecommerce
+
 # jVoiD
 
 ## Architect 
